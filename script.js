@@ -30,7 +30,7 @@ function handleFile(e) {
   }
 
   if (file.size > 8 * 1024 * 1024) {
-    setStatus("حجم الصورة كبير. اختر صورة أقل من 8MB.");
+    setStatus("حجم الصورة صغير. اختر صورة أقل من 8MB.");
     return;
   }
 
@@ -55,7 +55,7 @@ async function generateQR() {
     const form = new FormData();
     form.append("image", selectedFile);
 
-    const response = await fetch("https://api.imgbb.com/1/upload?key=87759503e96674b258f46661577b46e1", {
+    const response = await fetch("https://api.imgbb.com/1/upload?key=2a7332dd0a431d2b1bdb333fdaed690e", {
       method: "POST",
       body: form
     });
