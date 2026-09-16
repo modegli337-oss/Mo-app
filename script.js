@@ -55,7 +55,7 @@ async function generateQR() {
     const form = new FormData();
     form.append("image", selectedFile);
 
-    const response = await fetch("https://api.imgbb.com/1/upload?key=31e1abe1dc832665ffdb593357bb87ee", {
+    const response = await fetch(`https://api.imgbb.com/1/upload?key=${imgbbKey}`, {
       method: "POST",
       body: form
     });
