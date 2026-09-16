@@ -13,7 +13,7 @@ const copyBtn = document.getElementById("copyBtn");
 const urlBox = document.getElementById("urlBox");
 
 let selectedFile = null;
-let imageUrl = "";
+let imageUrl = "31e1abe1dc832665ffdb593357bb87ee";
 
 imageInput.addEventListener("change", handleFile);
 changeBtn.addEventListener("click", () => imageInput.click());
