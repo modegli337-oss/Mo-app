@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MO QR - حوّل صورتك إلى QR Code بسهولة.">
+  <meta name="theme-color" content="#9edff5">
+  <title>MO QR | Image to QR</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="MO QR">
+      <span class="brand-mark">MO</span><span>QR</span>
+    </a>
+    <span class="by">by MODEGLI</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="badge">IMAGE → QR</div>
+      <h1>حوّل صورتك إلى <span>QR</span></h1>
+      <p>ارفع صورة، ثم أنشئ رمز QR يمكن لأي شخص مسحه لفتح الصورة.</p>
+    </section>
+
+    <section class="card">
+      <label class="upload-box" id="uploadBox" for="imageInput">
+        <div class="upload-icon">↑</div>
+        <strong>اختر صورة</strong>
+        <span>PNG أو JPG أو WEBP</span>
+        <input id="imageInput" type="file" accept="image/png,image/jpeg,image/webp">
+      </label>
+
+      <div class="preview-wrap hidden" id="previewWrap">
+        <img id="preview" alt="معاينة الصورة">
+        <button class="text-btn" id="changeBtn" type="button">تغيير الصورة</button>
+      </div>
+
+      <div class="actions">
+        <button class="primary" id="generateBtn" type="button" disabled>إنشاء QR</button>
+        <button class="secondary" id="resetBtn" type="button">إعادة ضبط</button>
+      </div>
+
+      <div class="status" id="status" role="status"></div>
+
+      <div class="result hidden" id="result">
+        <h2>QR جاهز</h2>
+        <p>امسح الرمز لفتح الصورة.</p>
+        <div class="qr-frame"><canvas id="qrCanvas"></canvas></div>
+        <div class="result-actions">
+          <button class="primary" id="downloadBtn" type="button">تحميل QR</button>
+          <button class="secondary" id="copyBtn" type="button">نسخ رابط الصورة</button>
+        </div>
+        <div class="url-box" id="urlBox"></div>
+      </div>
+    </section>
+
+    <section class="note">
+      <strong>مهم:</strong> هذه النسخة تنشئ رابطًا للملف باستخدام خدمة رفع عامة، لذلك لا ترفع صورًا خاصة أو حساسة.
+    </section>
+
+    <section class="about">
+      <h2>عن MO QR</h2>
+      <p>أداة بسيطة من MODEGLI لتحويل الصور إلى رموز QR قابلة للمسح.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">MO QR <span>×</span> MODEGLI</div>
+    <div class="links">
+      <a href="https://www.tiktok.com/@modegli" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://www.instagram.com/modegli7" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:modegli.contact@gmail.com">Email</a>
+    </div>
+    <small>© 2026 MODEGLI. All rights reserved.</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
